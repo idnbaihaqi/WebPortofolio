@@ -28,20 +28,21 @@ header {
     width: 100%;
     top: 0;
     right: 0;
-    z-index: 1000;
+    z-index: 999;
     display: flex;
     align-items: center;
-    justify-content: center;
-    background: transparent;
-    padding: 22px 15%;
+    justify-content: left;
+    background: rgba(39, 39, 39, 0.8);
+    padding: 5px 15%;
     border-bottom: 1px solid transparent;
     transition: all .45s ease;
 }
 .logo {
-    color: var(--text-color);
-    font-size: 35px;
+    color: white;
+    font-size: 30px;
     font-weight: 700;
     letter-spacing: 1px;
+    margin-right: 300px;
 }
 span {
     color: var(--main-color);
@@ -62,6 +63,10 @@ span {
 .navlist a .active {
     color: var(--main-color);
 }
+.navlist li a {
+    color: #ffffff;
+}
+
 #menu-icon {
     font-size: 35px;
     color: var(--text-color);
@@ -77,7 +82,7 @@ section {
     position: relative;
     height: 100vh;
     width: 100%;
-    background-image: url(/img/background.jpg);
+    background-image: url(/img/bgweb.png);
     background-size: cover;
     background-position: center;
     display: flex;
@@ -88,20 +93,14 @@ section {
     margin-bottom: 20px;
 }
 .one {
-    display: inline-block;
-    margin-right: 15px;
-    padding: 0 15px;
-    line-height: 32px;
-    font-size: 20px;
+    font-size: 50px;
     font-weight: 500;
-    border-radius: 5px;
-    background: var(--main-color);
     color: var(--text-color);
 }
 .two {
     display: inline-block;
-    color: var(--second-color);
-    font-size: 20px;
+    color: var(--main-color);
+    font-size: 50px;
     font-weight: 500;
 }
 .home-text h1 {
@@ -113,17 +112,20 @@ section {
 
 }
 .home-text h3 {
-    color: var(--text-color);
-    margin: 0 0 35px;
+    color: #ffffff;
+    margin: 0 0 25px;
     font-size: 3rem;
     font-weight: 700;
     line-height: 1.1;
+}
+.home-text h3 span {
+    color: var(--main-color);
 }
 .home-text p {
     color: var(--second-color);
     font-size: var(--p-font);
     line-height: 1.1;
-    margin: 0 0 8px;
+    margin: 10px 0 15px;
 }
 .button {
     display: inline-block;
@@ -132,8 +134,8 @@ section {
 }
 .btn {
     display: inline-block;
-    padding: 12px;
-    background-color: var(--main-color);
+    padding: 8px;
+    background-color: rgb(36, 36, 206);
     border-radius: 5px;
     color: var(--text-color);
     font-size: 1rem;
@@ -164,4 +166,136 @@ border-radius: 5px;
 .about-text h4 {
     font-size: 24px;
     font-weight: 600;
+    color: var(--text-color);
+    line-height: 1.7;
+    margin: 15px 8 30px;
+}
+.about-text p {
+    color: var(--second-color);
+    font-size: var(--p-font);
+    font-family: Poppins;
+    line-height: 1.8;
+    margin-bottom: 4rem;
+}
+.services {
+    background: var(--sedond-bg-color);
+
+}
+.main-text {
+    text-align: center;
+}
+.main-text p {
+    color: var(--second-color);
+    font: 15px;
+    margin-bottom: 10px;
+}
+.main-text h2 {
+    font-size: var(--h2-font);
+    line-height: 1;
+}
+.services-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+    align-items: center;
+    gap: 2.5rem;
+    margin-top: 5rem;
+}
+.box {
+    background: var(--bg-color);
+    padding: 35px 45px;
+    border-radius: 8px;
+    transition: all .45s ease;
+}
+.s-icons i {
+    font-size: 32px;
+    margin-bottom: 20px;
+
+}
+.box h3 {
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--text-color);
+    margin-bottom: 15px;
+}
+.box p {
+    color: var(--second-color);
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+.box:hover {
+    transform: translateY(-8px);
+    cursor: pointer;
+}
+.portofolio-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, auto));
+    align-items: center;
+    gap: 2.5rem;
+    margin-top: 5rem;
+}
+.row {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.row img {
+    width: 100%;
+    border-radius: 8px;
+    display: block;
+    transition: transfrom 0.5s;
+}
+.layer {
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0,0,0,0.1), #13415a);
+    position: absolute;
+    border-radius: 8px;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 40px;
+    transition: height 0.5s;
+}
+.layer h5 {
+    font: 20px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+.layer p {
+    color: var(--second-color);
+    font-size: 1rem;
+    line-height: 1.8;
+
+}
+.layer i {
+    color: var(--main-color);
+    margin-top: 20px;
+    font-size: 20px;
+    background: var(--text-color);
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+
+}
+.row:hover img {
+    transform: scale(1.1);
+
+}
+.row:hover .layer {
+    height: 50%;
+}
+.content {
+    background: var(--sedond-bg-color);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 2.5rem;
 }
